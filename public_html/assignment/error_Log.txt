@@ -1,0 +1,66 @@
+25:10:18 04:58:16
+exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'unn_w18036486'@'localhost' to database 'uuuuuunn_w18036486'' in /home/unn_w18036486/public_html/assignment/includes/functions.php:11
+Stack trace:
+#0 /home/unn_w18036486/public_html/assignment/includes/functions.php(11): PDO->__construct('mysql:host=loca...', 'unn_w18036486', 'Mung5Nice')
+#1 /home/unn_w18036486/public_html/assignment/produceRecordsList.php(6): getConnection()
+#2 {main}
+25:10:18 04:58:16
+exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'unn_w18036486'@'localhost' to database 'uuuuuunn_w18036486'' in /home/unn_w18036486/public_html/assignment/includes/functions.php:11
+Stack trace:
+#0 /home/unn_w18036486/public_html/assignment/includes/functions.php(11): PDO->__construct('mysql:host=loca...', 'unn_w18036486', 'Mung5Nice')
+#1 /home/unn_w18036486/public_html/assignment/produceRecordsList.php(6): getConnection()
+#2 {main}
+25:10:18 04:58:16
+exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'unn_w18036486'@'localhost' to database 'uuuuuunn_w18036486'' in /home/unn_w18036486/public_html/assignment/includes/functions.php:11
+Stack trace:
+#0 /home/unn_w18036486/public_html/assignment/includes/functions.php(11): PDO->__construct('mysql:host=loca...', 'unn_w18036486', 'Mung5Nice')
+#1 /home/unn_w18036486/public_html/assignment/produceRecordsList.php(6): getConnection()
+#2 {main}
+25:10:18 04:58:16
+exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'unn_w18036486'@'localhost' to database 'uuuuuunn_w18036486'' in /home/unn_w18036486/public_html/assignment/includes/functions.php:11
+Stack trace:
+#0 /home/unn_w18036486/public_html/assignment/includes/functions.php(11): PDO->__construct('mysql:host=loca...', 'unn_w18036486', 'Mung5Nice')
+#1 /home/unn_w18036486/public_html/assignment/produceRecordsList.php(6): getConnection()
+#2 {main}
+25:10:18 04:58:16
+exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'unn_w18036486'@'localhost' to database 'uuuuuunn_w18036486'' in /home/unn_w18036486/public_html/assignment/includes/functions.php:11
+Stack trace:
+#0 /home/unn_w18036486/public_html/assignment/includes/functions.php(11): PDO->__construct('mysql:host=loca...', 'unn_w18036486', 'Mung5Nice')
+#1 /home/unn_w18036486/public_html/assignment/produceRecordsList.php(6): getConnection()
+#2 {main}
+25:10:18 04:58:16
+exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'unn_w18036486'@'localhost' to database 'uuuuuunn_w18036486'' in /home/unn_w18036486/public_html/assignment/includes/functions.php:11
+Stack trace:
+#0 /home/unn_w18036486/public_html/assignment/includes/functions.php(11): PDO->__construct('mysql:host=loca...', 'unn_w18036486', 'Mung5Nice')
+#1 /home/unn_w18036486/public_html/assignment/produceRecordsList.php(6): getConnection()
+#2 {main}
+25:10:18 04:58:17
+exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'unn_w18036486'@'localhost' to database 'uuuuuunn_w18036486'' in /home/unn_w18036486/public_html/assignment/includes/functions.php:11
+Stack trace:
+#0 /home/unn_w18036486/public_html/assignment/includes/functions.php(11): PDO->__construct('mysql:host=loca...', 'unn_w18036486', 'Mung5Nice')
+#1 /home/unn_w18036486/public_html/assignment/produceRecordsList.php(6): getConnection()
+#2 {main}
+25:10:18 04:58:17
+exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'unn_w18036486'@'localhost' to database 'uuuuuunn_w18036486'' in /home/unn_w18036486/public_html/assignment/includes/functions.php:11
+Stack trace:
+#0 /home/unn_w18036486/public_html/assignment/includes/functions.php(11): PDO->__construct('mysql:host=loca...', 'unn_w18036486', 'Mung5Nice')
+#1 /home/unn_w18036486/public_html/assignment/produceRecordsList.php(6): getConnection()
+#2 {main}
+25:10:18 04:58:17
+exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'unn_w18036486'@'localhost' to database 'uuuuuunn_w18036486'' in /home/unn_w18036486/public_html/assignment/includes/functions.php:11
+Stack trace:
+#0 /home/unn_w18036486/public_html/assignment/includes/functions.php(11): PDO->__construct('mysql:host=loca...', 'unn_w18036486', 'Mung5Nice')
+#1 /home/unn_w18036486/public_html/assignment/produceRecordsList.php(6): getConnection()
+#2 {main}
+25:10:18 04:58:17
+exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'unn_w18036486'@'localhost' to database 'uuuuuunn_w18036486'' in /home/unn_w18036486/public_html/assignment/includes/functions.php:11
+Stack trace:
+#0 /home/unn_w18036486/public_html/assignment/includes/functions.php(11): PDO->__construct('mysql:host=loca...', 'unn_w18036486', 'Mung5Nice')
+#1 /home/unn_w18036486/public_html/assignment/produceRecordsList.php(6): getConnection()
+#2 {main}
+25:10:18 04:58:17
+exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'unn_w18036486'@'localhost' to database 'uuuuuunn_w18036486'' in /home/unn_w18036486/public_html/assignment/includes/functions.php:11
+Stack trace:
+#0 /home/unn_w18036486/public_html/assignment/includes/functions.php(11): PDO->__construct('mysql:host=loca...', 'unn_w18036486', 'Mung5Nice')
+#1 /home/unn_w18036486/public_html/assignment/produceRecordsList.php(6): getConnection()
+#2 {main}
