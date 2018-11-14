@@ -1,7 +1,7 @@
 <?php
 ini_set("session.save_path", "../assignment/sessionData");
-session_start();
 
+session_start();
 ?>
 
 <html>
@@ -23,6 +23,7 @@ catch (Exception $e) {
 
 ?>
 
+
 <div class='divWrapper'>
 	<div class='divBody'>
 		<div class='divRow' id='header'>
@@ -40,13 +41,63 @@ catch (Exception $e) {
 			<div class='column right'>
 
 			<?php 
-			
-			if ($_SESSION['logged-in'] = true)
-			{
-				//$_SESSION['username'] = $username;
-				echo("{$_SESSION['username']}"."<br />");
-			}
-			
+			// if (session_status() !== PHP_SESSION_ACTIVE) {
+				// session_start();
+				// }
+				// else{
+				// if ($_SESSION['logged-in'] = true)
+				// {
+					// //$_SESSION['username'] = $username;
+					// echo("{$_SESSION['username']}"."<br />");				
+					// echo "<a href='index.php?log_out'>Log Out</a>";				
+				// }
+				// else 
+				// {
+					// echo "login, sign up";
+				// }
+					
+				
+				// }
+				
+				
+				
+				// if ($_SESSION['logged-in'] = true)
+					// {						
+						// echo "<a href='logout.php?log_out'>Log Out</a>";
+						// echo "User has been Logged in";
+					// }
+				
+					
+					// if (isset($_SESSION['logged-in']))
+					// {
+						// if ($_SESSION['logged-in'] != NULL){
+							// echo $_SESSION['logged-in'];                   
+						// }
+					// }
+					
+					
+					// if (isset($_SESSION['username']))
+					// {
+						// if ($_SESSION['username'] != NULL){
+							// echo $_SESSION['username'];
+							// $username = $_SESSION['username'];			
+							// echo "<p>Username: $username</p>\n";
+							
+						// }
+					// }
+					
+					
+				 // if ($_SESSION['username'] != NULL)
+					 // {
+						// // echo("{$_SESSION['username']}"."<br />");
+						// // echo "Username is not Null";
+					 // }
+					// else 
+					// {
+						// //do nothing
+					// }
+					
+				
 						
 			?>
 			

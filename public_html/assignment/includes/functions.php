@@ -52,4 +52,10 @@
 		
 	}
 	
+	
+	$username = filter_has_var(INPUT_POST, 'username') ? $_POST['username']: null;
+	$username = trim($username);
+	$password = filter_has_var(INPUT_POST, 'password') ? $_POST['password']: null;
+	$password = trim($password);
+	
 ?>
