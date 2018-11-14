@@ -1,3 +1,8 @@
+<?php
+ini_set("session.save_path", "../assignment/sessionData");
+session_start();
+
+?>
 
 <html>
 <head>
