@@ -5,12 +5,7 @@ if (isset($_GET['log_out']))
 {
 echo "Signed Out";
 
-		$_SESSION = array(); 		
-
-		 
-
-
-
+		$_SESSION = array(); 	
 		$params = session_get_cookie_params();
 				setcookie(session_name(), '', time() - 42000,
 					$params['path'], $params['domain'],
@@ -18,13 +13,17 @@ echo "Signed Out";
 				);
 				session_destroy();
 				unset($_SESSION);
-
-		session_destroy();
-
-
-
-
-
+				
+				
+				
+				$has_session = session_status() == PHP_SESSION_ACTIVE;
+				
+				if($has_session == true)
+				{
+					echo "Session Destroyed";
+					session_destroy();
+				}
+				
 		
 		header("Refresh:5; url=index.php");
 

@@ -28,7 +28,7 @@ require_once("includes/headers/header.php");
 
 
 <a href="logout.php?log_out">Logout</a>
-
+<a href="index.php">Home</a>
 
 
 

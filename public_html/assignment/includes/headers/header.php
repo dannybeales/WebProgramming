@@ -68,23 +68,25 @@ catch (Exception $e) {
 					// }
 				
 					
-					// if (isset($_SESSION['logged-in']))
-					// {
-						// if ($_SESSION['logged-in'] != NULL){
-							// echo $_SESSION['logged-in'];                   
-						// }
-					// }
+					 if (isset($_SESSION['logged-in']))
+					 {
+						 if ($_SESSION['logged-in'] != NULL){
+							  $username = $_SESSION['username'];			
+							 echo "<p>Username: $username</p>\n";
+							 echo "<a href='logout.php?log_out'>Log Out</a>";                   
+						 }
+					 }
 					
 					
-					// if (isset($_SESSION['username']))
-					// {
-						// if ($_SESSION['username'] != NULL){
-							// echo $_SESSION['username'];
-							// $username = $_SESSION['username'];			
-							// echo "<p>Username: $username</p>\n";
+					 // if (isset($_SESSION['username']))
+					 // {
+						 // if ($_SESSION['username'] != NULL){
+							 // echo $_SESSION['username'];
+							 // $username = $_SESSION['username'];			
+							 // echo "<p>Username: $username</p>\n";
 							
-						// }
-					// }
+						 // }
+					 // }
 					
 					
 				 // if ($_SESSION['username'] != NULL)
@@ -101,7 +103,6 @@ catch (Exception $e) {
 						
 			?>
 			
-			login, sign up, logout here
 			
 			
 			
