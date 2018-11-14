@@ -7,6 +7,16 @@ require_once("includes/headers/header.php");
 <?php 
 //Login proccess 
 
+
+//sending sessions about test
+// $word = "Testing Sessions";
+// $_SESSION['word'] = $word;
+
+// echo("{$_SESSION['word']}"."<br />");
+
+
+echo "<a href='login.php'>Login</a>";
+
 	$username = filter_has_var(INPUT_POST, 'username') ? $_POST['username']: null;
 	$username = trim($username);
 	$password = filter_has_var(INPUT_POST, 'password') ? $_POST['password']: null;
