@@ -37,7 +37,24 @@ catch (Exception $e) {
 
 			<div class='column left'> &nbsp;</div>
 			<div class='column middle'> //promotion will go here.</div>
-			<div class='column right'> login, sign up, logout here</div>
+			<div class='column right'>
+
+			<?php 
+			
+			if ($_SESSION['logged-in'] = true)
+			{
+				//$_SESSION['username'] = $username;
+				echo("{$_SESSION['username']}"."<br />");
+			}
+			
+						
+			?>
+			
+			login, sign up, logout here
+			
+			
+			
+			</div>
 
 
 		</div>
