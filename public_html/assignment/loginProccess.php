@@ -20,10 +20,11 @@ echo "<a href='login.php'>Login</a>";
 			//first we need to clear any sessions that may have already existed.
 			unset($_SESSION['username']);
 			unset($_SESSION['logged-in']);
+			unset($_SESSION['isAdmin']);
 			
 			$dbConn = getConnection();
 			
-			$sqlQuery = "SELECT passwordHash FROM users WHERE username = :username";
+			$sqlQuery = "SELECT passwordHash FROM nmc_users WHERE username = :username";
 			$stmt = $dbConn->prepare($sqlQuery);
 			$stmt->execute(array(':username' => $username));
 			$user = $stmt->fetchObject();
@@ -33,10 +34,34 @@ echo "<a href='login.php'>Login</a>";
 			{					
 					if (password_verify($password, $user->passwordHash)) {
 						echo "<p>Logon Success!</p>\n";
-						echo "<p>Restricted Page<p>\n";
 						
 						$_SESSION['logged-in'] = true;
 						$_SESSION['username'] = $username;
+						$_SESSION['isAdmin'] = true;
+						
+						
+						
+						//This is to stop a user getting redirected back to the resitrcited page if they log in after being given said page. Causes a mini infinte loop.
+						
+						$homeUrl = HOME_URL;
+						
+						
+						
+						if ($_SERVER['HTTP_REFERER'] == "RESTRICTED_URL")
+						{
+								//header("Location: $homeUrl"); //Refer back to index
+								//header("Location: index.php");
+								header("Location: {$_SERVER['HTTP_REFERER']}"); //Refer back to previous/same page on refresh.
+						}
+						else 
+						{
+							
+							header("Location: $homeUrl");
+							//header("Location: {$_SERVER['HTTP_REFERER']}"); //Refer back to previous/same page on refresh.
+						}				
+						
+						
+						
 					}
 					else
 					{						

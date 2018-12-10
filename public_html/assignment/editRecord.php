@@ -1,7 +1,32 @@
 <?php include("includes/headers/editRecordsListHeader.php"); 
 
 //echo base table for the table the user will use to edit a record.
-echo "<br />
+
+		// //Created a function in includes/functions.php so can be called from multiple places. ie when there is an error. 
+		// CallEditRecord();
+ 
+ 
+ //E_recordTitle=recordTitle&E_recordYear=recordYear
+ 
+ try {
+	 
+	 if(isset($_GET["E_recordTitle"]))
+    {
+        $error101 = $_GET["E_recordTitle"];
+		
+		ErrorStringBuilder($error101);
+
+
+
+
+	}
+ }
+catch (Exception $e){
+		}
+ 
+ 
+
+		echo "<br />
 <div class='divTable blueTable'>
 	<div class='divTableHeading'>
 		<div class='divTableRow'>
@@ -10,6 +35,8 @@ echo "<br />
 		</div>
 	</div>
 ";
+
+
 
 	try {
 			
@@ -110,7 +137,7 @@ echo "<br />
 						
 						<div class='divTableRow'>
 							<div class='divTableCell'>
-								Record Prive
+								Record Price
 							</div>
 							
 							<div class='divTableCell'>
@@ -130,9 +157,7 @@ echo "<br />
 		catch (Exception $e){
 		echo "<p>Query failed: ".$e->getMessage()."</p>\n";
 		}
-		
-		
- 
+
 require_once("includes/footer.php");
 
 ?>

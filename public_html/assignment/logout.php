@@ -24,8 +24,7 @@ echo "Signed Out";
 					session_destroy();
 				}
 				
-		
-		header("Refresh:5; url=index.php");
+		header("Refresh:0; url={$_SERVER['HTTP_REFERER']}"); //Refer back to previous/same page on refresh.
 
 }
 

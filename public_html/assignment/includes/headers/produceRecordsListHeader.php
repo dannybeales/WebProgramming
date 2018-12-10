@@ -1,7 +1,13 @@
 <?php 
 require_once("header.php");
 ?>
+<?php 
+	isRestricted();
+		
+?>
 
+
+							
 
 <div class='divTable blueTable'>
 <div class='divTableHeading'>

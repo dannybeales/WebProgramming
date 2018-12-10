@@ -1,10 +1,65 @@
 <?php
 
-	$logFileDirectory = "error_Log.txt";
 
+	//Directories
 	
+	$logFileDirectory = "error_Log.txt";
+	
+	//URLS
+	
+	$homeDIR = "http://unn-w18036486.newnumyspace.co.uk/assignment/";
+	$homeURL = "index.php";
+	$restrictedURL = "http://unn-w18036486.newnumyspace.co.uk/assignment/restricted.php";
+	$defaultCurrenty = "£: ";
+	
+	//Strings
+	$titleString = "Title";
+	
+	//Error Strings
+	$emptyFieldErrorStr = "A required field is empty:";
+	
+	//Inputs		
+	$recordTitleInput = "recordTitle";
+	$recordPriceInput = "recordPrice";
 
+	######_____Defines_____######	
+	
+	//URL Defines
+	define("HOME_DIR", "$homeDIR");
+	define("HOME_URL", "$homeURL");	
+	define("RESTRICTED_URL", "$restrictedURL");
+	define("DEFUALT_CURRENCY", "$defaultCurrenty");
+	
+	//String Defines
+	define("TITLE_STRING", "$titleString");
+	
+	//Error String Defines
+	define("EMPTY_FIELD", "$emptyFieldErrorStr");
+	
+	//Input Defines
+	define("RECORD_TITLE_INPUT", "$recordTitleInput");
+	define("RECORD_PRICE_INPUT", "$recordPriceInput");
+	
+	
+	
+	//function to check if you are an admin, This function is to be placed on any pages that you do not want usual users seeing. maybe add some inputs for more detail.
+	function isRestricted() {	
 
+		if (isset($_SESSION['logged-in']) && $_SESSION['isAdmin']) {
+		}
+		else
+		{
+			header("Location: restricted.php");//Instant Re direct to Restricted due to lack of permissions.
+		}			
+	}
+	
+	function sendHome() {
+		
+		$homeURL = HOME_URL;
+		header("Refresh:5; url=$homeURL");
+	}
+	
+	
 	function getConnection() {
 		try {
 				$connection = new PDO("mysql:host=localhost;dbname=unn_w18036486",
@@ -21,8 +76,39 @@
 				throw new Exception("There has been a major error. Please contact your server administrator.");				
 			}
 	}	
+	
+	
+	//Cannot remember why i have placed this here. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <- Bug check.
 	$admin = True;
 
+	$record;
+	$errorReturnString;
+	
+	
+	
+	function ErrorStringBuilder($error)  //////ERROR IS HERE
+	{
+		
+		$container;
+		
+		if (strpos($error, 'record') !== false) {
+		$record = true;
+		$container = "Record";
+		}	
+		
+		if (strpos($error, 'recordTitle') !== false) {
+			echo EMPTY_FIELD . " " . $container . " " . TITLE_STRING;		
+		}
+		
+		if (strpos($error, 'recordPrice') !== false) {
+			echo "A Required Field is Empty: $container";
+		}	
+		
+		
+	}
+	
+	
+	
 	
 	function error_Logger($e) {
 		

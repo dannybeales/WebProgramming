@@ -5,8 +5,7 @@ require_once("includes/headers/header.php");
 
 
 <?php 
-//Login
-	
+//Login	Form
 		if (isset($_SESSION['logged-in']) && $_SESSION['logged-in']) {
 		echo "User Is currently logged in";	
 	}
@@ -19,12 +18,7 @@ require_once("includes/headers/header.php");
 		</form>
 		";
 	}
-	
-	
-	
-	
-	?>
-
+?>
 
 
 <a href="logout.php?log_out">Logout</a>
