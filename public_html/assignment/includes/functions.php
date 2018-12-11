@@ -5,40 +5,27 @@
 	
 	$logFileDirectory = "error_Log.txt";
 	
-	//URLS
 	
-	$homeDIR = "http://unn-w18036486.newnumyspace.co.uk/assignment/";
-	$homeURL = "index.php";
-	$restrictedURL = "http://unn-w18036486.newnumyspace.co.uk/assignment/restricted.php";
-	$defaultCurrenty = "£: ";
-	
-	//Strings
-	$titleString = "Title";
-	
-	//Error Strings
-	$emptyFieldErrorStr = "A required field is empty:";
-	
-	//Inputs		
-	$recordTitleInput = "recordTitle";
-	$recordPriceInput = "recordPrice";
-
 	######_____Defines_____######	
 	
 	//URL Defines
-	define("HOME_DIR", "$homeDIR");
-	define("HOME_URL", "$homeURL");	
-	define("RESTRICTED_URL", "$restrictedURL");
-	define("DEFUALT_CURRENCY", "$defaultCurrenty");
+	define("HOME_DIR", "http://unn-w18036486.newnumyspace.co.uk/assignment/");
+	define("HOME_URL", "index.php");	
+	define("RESTRICTED_URL", "http://unn-w18036486.newnumyspace.co.uk/assignment/restricted.php");
+	define("DEFUALT_CURRENCY", "£: ");
 	
 	//String Defines
-	define("TITLE_STRING", "$titleString");
+	define("TITLE_STRING", "Title");
+	define("PRICE_STRING", "Price");
+	define("YEAR_STRING", "Year");
 	
 	//Error String Defines
-	define("EMPTY_FIELD", "$emptyFieldErrorStr");
+	define("EMPTY_FIELD", "A required field is empty: ");
 	
 	//Input Defines
-	define("RECORD_TITLE_INPUT", "$recordTitleInput");
-	define("RECORD_PRICE_INPUT", "$recordPriceInput");
+	define("RECORD_TITLE_INPUT", "recordTitle");
+	define("RECORD_PRICE_INPUT", "recordPrice");
+	define("RECORD_YEAR_INPUT", "recordYear");
 	
 	
 	
@@ -101,8 +88,9 @@
 		}
 		
 		if (strpos($error, 'recordPrice') !== false) {
-			echo "A Required Field is Empty: $container";
+			echo EMPTY_FIELD . " " . $container . " " . PRICE_STRING;
 		}	
+		
 		
 		
 	}

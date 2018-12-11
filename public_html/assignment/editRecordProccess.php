@@ -31,13 +31,6 @@
 		$value = trim($value);
 	}
 
-	// function trim_All_Inputs($recordTitle, $recordYear, $recordPrice)
-	// {
-		
-		
-	// }
-	
-	// trim_All_Inputs($recordTitle, $recordYear, $recordPrice);
 	
 	//Get rid of any unwanted space.
 		trim_value($recordTitle);
@@ -49,40 +42,6 @@
 	//For each error: Enter into an array.
 	$errors = [];
 	
-	
-	//For each entry into the array, Print the String
-	if(!isset($recordTitle))
-	{
-		$errors = "You did not enter a Record Title";
-		$ifError = true;
-		$ifEmpty = true;
-	}
-	if(!isset($recordYear))
-	{
-		$errors = "You did not enter a Record Year";
-		$ifEmpty = true;
-		$ifError = true;
-	}
-	if(!isset($recordPrice))
-	{
-		$errors = "You did not enter a Record Price";
-		$ifError = true;
-	}
-	if(!isset($pubID))
-	{
-		$errors = "You did not enter a Publisher";
-		$ifError = true;
-	}
-	if(!isset($catID))
-	{
-		$errors = "You did not enter a Category";
-		$ifError = true;
-	}
-	
-	if($ifError == true)
-	{
-	 echo "There is an error";	
-	}
 	
 	
 	//if error = false 
@@ -104,32 +63,27 @@
 		if (empty($_POST[$field])) {
 			$ifError = true;
 			$ifEmpty =true;
-			echo "missing fields: $field";
 			$arraylink = "&$arrayStringBuilder$field=$field";
 			$ErrorLink[] = $arraylink;
 		}
 	}
 	
+	//for price check that its 4 digit, and not a higher number than the current year
+	if ($_POST['recordYear']) != 4) 
+	{
+		echo date("Y");
+	}
+	
+	
+	
+	
 	$gluedArray = implode("", $ErrorLink);
 	
-   header("Refresh:0; url=editRecord.php?recordID=$recordID$gluedArray");
-	
-		
+   
 	
 	
 	
-	if(!isset($recordTitle)) //isset and trim functions to check if empty, Add empty text to make sure its not null and then give a response.
-		{
-			$ifEmpty = true;
-			echo "You did not enter a record Title";
-		}	
-	else
-		{
-			 $ifEmpty = false;		
-		} //Else end Tag
-
-	
-		if($ifError) //if none of the inputs are empty, Edit the DataBase.
+		if(!$ifError) //if none of the inputs are empty, Edit the DataBase.
 		{			
 	
 				$dbConn = getConnection();	
@@ -161,13 +115,17 @@
 							</div>
 				</div>
 			<br />";
+			
+			echo "<button type='button' class='backToIndex'><a href='index.php'>Back to Home</a></button>";
+
+		
 		}	
+		else
+		{
+			header("Refresh:0; url=editRecord.php?recordID=$recordID$gluedArray");
+		}
 		
-echo "<button type='button' class='backToIndex'><a href='index.php'>Back to Home</a></button>";
-
-
-
 		
-		require_once("includes/footer.php");
-	
+
+	require_once("includes/footer.php");
 ?>

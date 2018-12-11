@@ -1,42 +1,42 @@
 <?php include("includes/headers/editRecordsListHeader.php"); 
 
-//echo base table for the table the user will use to edit a record.
-
-		// //Created a function in includes/functions.php so can be called from multiple places. ie when there is an error. 
-		// CallEditRecord();
+ echo date("Y");
  
- 
- //E_recordTitle=recordTitle&E_recordYear=recordYear
+ //If we have been sent back from EditRecordProcess due to errors, This is where we collect the new data. 
+ //All Gets will require an E_ before the data title. Ie E_recordTitle" 
  
  try {
-	 
+	  $error;
+	  
 	 if(isset($_GET["E_recordTitle"]))
     {
-        $error101 = $_GET["E_recordTitle"];
-		
-		ErrorStringBuilder($error101);
-
-
-
-
+        $error = $_GET["E_recordTitle"];		
+		ErrorStringBuilder($error);
+	}	
+	 if(isset($_GET["E_recordPrice"]))
+    {
+        $error = $_GET["E_recordPrice"];		
+		ErrorStringBuilder($error);
 	}
+	
+	 if(isset($_GET["E_recordYear"]))
+    {
+        $error = $_GET["E_recordYear"];		
+		ErrorStringBuilder($error);
+	}	
  }
 catch (Exception $e){
 		}
  
- 
 
 		echo "<br />
-<div class='divTable blueTable'>
-	<div class='divTableHeading'>
-		<div class='divTableRow'>
-			<div class='divTableHead'>Editing Record</div>
-			<div class='divTableHead'></div>
-		</div>
-	</div>
-";
-
-
+		<div class='divTable blueTable'>
+			<div class='divTableHeading'>
+				<div class='divTableRow'>
+					<div class='divTableHead'>Editing Record</div>
+					<div class='divTableHead'></div>
+				</div>
+			</div>";
 
 	try {
 			
